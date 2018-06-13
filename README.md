@@ -3,8 +3,8 @@ Proyecto Universidad Fidelitas: Sistema Indicador de Riesgo Bucodental (SIRB) de
 
 
 Participantes:
-\n Jessica Centeno Valle
-Lisbeth Lao Aguilar 
-Melissa Carranza Mejias
+Jessica Centeno Valle, 
+Lisbeth Lao Aguilar, 
+Melissa Carranza Mejias, 
 Douglas Campos Vargas
 
