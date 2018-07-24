@@ -1,3 +1,5 @@
 Reportes 
 
 https://github.com/Jimmy-JS/laravel-report-generator
+
+http://www.codedrinks.com/crear-un-reporte-con-fpdf-usando-php-y-mysql/  Este codigo esta para un  sistema de clinica. 
