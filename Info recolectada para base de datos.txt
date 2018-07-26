@@ -2,3 +2,13 @@ Base de datos
 
 https://www.youtube.com/watch?v=tmL5Z9oIFu0
 
+https://www.youtube.com/watch?v=uePpUCewA9A
+
+https://upcommons.upc.edu/bitstream/handle/2099.1/21409/Article.pdf
+
+
+
+
+----------------------Versiones --------------------------
+Netbeans 8.02
+JDK 8U111
