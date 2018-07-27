@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="http://localhost:8080/ProyectoFinalJC/faces/resources/css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/ProyectoFinalJC/faces/resources/css/cssLayout.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/ProyectoFinalJC/faces/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="resources/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="resources/js/index.js" type="text/javascript"></script>
+        <script src="resources/js/verResultado.js" type="text/javascript"></script>
+        <title>Analisis2</title>
+        <ui:insert name="head"/>
+    </h:head>
+
+    <h:body>
+        <div id="top">
+            <h1 style="position: fixed;">SIRB</h1>
+        </div>
+            <div id="_content">
+            <div id="left">
+                
+                
+                <h:form>
+                    <p:panelMenu style="width: 100%;">
+                        <p:submenu label="Menu" icon="ui-icon-clipboard">
+                            <p:menuitem value="Inicio" icon="ui-icon-plus"
+                                        url="http://localhost:8080/ANALISIS2/faces/index.xhtml"/>
+                            <p:menuitem value="Gestion Pacientes" icon="ui-icon-document"
+                                        url="http://localhost:8080/ANALISIS2/faces/GestionPacientes.xhtml"/>
+                            <p:menuitem value="Gestion Sintomas" icon="ui-icon-document"
+                                        url="http://localhost:8080/ANALISIS2/faces/GestionSintomas.xhtml"/>
+                            <p:menuitem value="Gestion Enfermedades" icon="ui-icon-document" 
+                                        url="http://localhost:8080/ANALISIS2/faces/GestionEnfermedades.xhtml"/>
+                            <p:menuitem value="Gestion Cond y Riesgo" icon="ui-icon-document" 
+                                        url="http://localhost:8080/ANALISIS2/faces/GestionCondyRiesgo.xhtml"/>
+                             <p:menuitem value="Reportes" icon="ui-icon-document"
+                                        url="http://localhost:8080/ANALISIS2/faces/Reportes.xhtml"/>
+                             <p:menuitem value="Configuración" icon="ui-icon-plus"
+                                        url="http://localhost:8080/ANALISIS2/faces/Configuracion.xhtml"/>
+                        </p:submenu>
+                        <p:separator/>
+                    </p:panelMenu>
+                </h:form>
+            </div>
+            <div id="content">
+                <div class="container" style="width:100%;">
+                    <ui:insert name="content"></ui:insert>
+                </div>
+            </div>
+            <div id="right"/>
+        </div>
+    </h:body>
+</html>
