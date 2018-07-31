@@ -1,0 +1,66 @@
+Base de datos: 
+
+ccss_bd
+
+------------------------------------------------------------------
+
+
+tbl_localidad:
+
+CREATE TABLE `ccss_bd`.`tbl_localidad` ( `id_localidad` INT NOT NULL AUTO_INCREMENT , `nombre_localidad` VARCHAR(75) NOT NULL , `provincia` VARCHAR(25) NOT NULL , PRIMARY KEY (`id_localidad`)) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+------------------------------------------------------------------
+
+
+tbl_especialidad:
+
+CREATE TABLE `ccss_bd`.`tbl_especialidad` ( `id_especialidad` INT NOT NULL AUTO_INCREMENT , `nombre_especialidad` VARCHAR(50) NOT NULL , `desc_especialidad` VARCHAR(100) NOT NULL , PRIMARY KEY (`id_especialidad`)) ENGINE = InnoDB;
+
+------------------------------------------------------------------
+
+
+tbl_pacientes:
+
+CREATE TABLE `ccss_bd`.`tbl_pacientes` ( `cedula` INT NOT NULL , `nombre` VARCHAR(50) NOT NULL , `apellidos` VARCHAR(50) NOT NULL , `localidad` VARCHAR(50) NOT NULL , `fecha_nacimiento` DATE NOT NULL , `tipo_sangre` VARCHAR(5) NOT NULL , `email` VARCHAR(50) NOT NULL , `telefono` VARCHAR(10) NOT NULL , `contacto_emergencia` VARCHAR(75) NOT NULL ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+ALTER TABLE `tbl_pacientes` ADD PRIMARY KEY(`cedula`);
+
+------------------------------------------------------------------
+
+
+tbl_usuarios:
+
+CREATE TABLE `ccss_bd`.`tbl_usuarios` ( `cedula` INT NOT NULL , `nombre` VARCHAR(50) NOT NULL , `apellidos` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `departamento` INT NOT NULL , `localidad` INT NOT NULL , `password` VARCHAR(20) NOT NULL , `rol` VARCHAR(20) NOT NULL ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+ALTER TABLE `tbl_usuarios` ADD PRIMARY KEY(`cedula`);
+ALTER TABLE tbl_usuarios ADD CONSTRAINT FK_localidad FOREIGN KEY (localidad) REFERENCES tbl_localidad(id_localidad);
+ALTER TABLE tbl_usuarios ADD CONSTRAINT FK_departamento FOREIGN KEY (departamento) REFERENCES tbl_departamento(id_departamento)
+
+------------------------------------------------------------------
+
+
+tbl_departamento:
+
+CREATE TABLE `ccss_bd`.`tbl_departamento` ( `id_departamento` INT NOT NULL AUTO_INCREMENT , `nombre_departamento` VARCHAR(25) NOT NULL , `desc_departamento` VARCHAR(100) NOT NULL , PRIMARY KEY (`id_departamento`)) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+------------------------------------------------------------------
+
+
+tbl_control_citas:
+
+CREATE TABLE `ccss_bd`.`tbl_control_citas` ( `id_control_citas` INT NOT NULL AUTO_INCREMENT , `fecha_cita` DATE NOT NULL , `hora_cita` TIME NOT NULL , `id_paciente` INT NOT NULL , `id_especialista` INT NOT NULL , `id_especialidad` INT NOT NULL , `sintomas` VARCHAR(100) NOT NULL , `tratamiento` VARCHAR(100) NOT NULL , PRIMARY KEY (`id_control_citas`)) ENGINE = InnoDB;
+
+ALTER TABLE tbl_control_citas ADD CONSTRAINT FK_especialidad FOREIGN KEY (id_especialidad) REFERENCES tbl_especialidad(id_especialidad);
+
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
