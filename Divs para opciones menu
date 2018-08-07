@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menú de Especialistas</title>
+</head>
+<body>
+  <form  action="/my-handling-form-page" method="post">
+
+		<div class="Menu">
+			<h1>Menú Principal</h1>
+			<input type="button" name="btnPacientes" value="Gestion de Pacientes" onclick="GestionPacientes()">
+			<input type="button" name="btnSintomas" value="Gestion de Sintomas" onclick="GestionSintomas()">
+			<input type="button" name="btnEnfermedades" value="Gestion de Enfermedades" onclick="GestionEnfermedades()">
+		</div>
+
+		<div id="GestionPacientes">
+			<h1>Gestión de Pacientes</h1>
+			<input type="button" name="btnAgregar" value="Agregar" onclick="Paciente()">
+			<input type="button" name="btnModificar" value="Modificar" onclick="Paciente()">
+			<input type="button" name="btnCancelar" value="Cancelar" onclick="Paciente()">
+		</div>
+
+		<div id="Pacientes">
+            <br>
+			<label>Nombre Completo:</label>	
+			<input type="text" name="txtNombrePaciente">
+            <label>Edad:</label>
+            <input type="text" name="txtEdad">
+            <br>
+            <br>
+            <label>Enfermedad:</label>
+          	<input type="text" name="txtEnfermedad">
+          	<label>Sintomas:</label>
+            <textarea rows="5" cols="50"></textarea>
+		</div>
+
+		<div id="GestionSintomas">
+			<h1>Gestión de Síntomas</h1>
+		    <input type="button" name="btnAgregar" value="Agregar" onclick="Sintoma()">
+			<input type="button" name="btnModificar" value="Modificar" onclick="Sintoma()">
+			<input type="button" name="btnCancelar" value="Cancelar" onclick="Sintoma()">
+		</div>
+
+		<div id="Sintomas">	
+            <br>
+			<label>Nombre del síntoma:</label>	
+			<input type="text" name="txtNombreSintoma">
+            <label>Descipción:</label>
+            <input type="text" name="txtDescripcion">
+		</div>
+
+		<div id="GestionEnfermedades">
+			<h1>Gestión de Enfermedades</h1>
+		    <input type="button" name="btnAgregar" value="Agregar" onclick="Enfermedad()">
+			<input type="button" name="btnModificar" value="Modificar" onclick="Enfermedad()">
+			<input type="button" name="btnCancelar" value="Cancelar" onclick="Enfermedad()">
+		</div>
+
+		<div id="Enfermedades">
+        	<br>
+			<label>Nombre de la enfermedad:</label>	
+			<input type="text" name="txtNombreEnfermedad">
+            <label>Tipo de Enfermedad:</label>
+            <input type="text" name="txtTipoEnfermedad">
+		</div>
+  </form>
+</body>
+</html>
