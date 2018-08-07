@@ -69,6 +69,39 @@ En este momento, todas las partes de codigo que tenemos se prueban desde la plat
 #Versionamiento 
 En el proyecto hemos definido colocar versiones en formato X.x.x en lo cual se puede identificar los avances pequenos en mejoras de codigo  seguidas de un punto a la version y en el caso de modificaciones grandes que nos afecten en la raiz del proyecto colocamos numeros consecutivos a la siguiente version. 
 
+#Pasos antes de poner en Produccion
+Creación de los documentos entregables y envío a de los mismos :
+* Revisión de la aplicación por parte de la junta en los tres ámbitos siguientes:
+* Cumplimiento de estándares de BBDD
+* Cumplimiento de estándares J2EE
+* Cumplimiento de estándares de Seguridad
+* Si el paso anterior se supera con éxito, es decir, se validan estándares por parte de la
+junta, se crea la base de datos en pruebas, se crean los roles de seguridad en el
+single-sign-on (de pruebas) del Govern Balear, se crean los enlaces de pruebas en la
+intranet/extranet y se despliega la aplicación en los servidores de pruebas (nunca
+directamente en producción).
+* Se notificará al usuario que hizo la petición de instalación de los posibles problemas
+detectados o de la correcta instalación en pruebas de la aplicación, así como de los
+detalles particulares de la misma.
+* El responsable funcional o informático de la conselleria envía petición para asignar los
+roles de seguridad de pruebas a los usuarios que testearan la aplicación
+* El responsable del fichero de datos1 de la aplicación valida funcionalmente la versión
+desplegada y envía una petición firmada a la junta para el pase a producción de la
+versión.
+* Se crea la base de datos en producción, se crean los roles de seguridad en el
+single-sign-on del Govern Balear, se crean los enlaces de producción en la
+intranet/extranet y se despliega la aplicación en los servidores de producción.
+* Se notificará al usuario que hizo la petición de instalación de los posibles problemas
+detectados o de la correcta instalación en producción de la aplicación, así como de los
+detalles particulares de la misma.
+* El responsable funcional de la conselleria o dirección general envía petición firmada por
+el responsable del fichero (aplicación) para asignar los roles de seguridad a los usuarios
+de producción
+* Para los pases a producción será necesario especificar en el cuaderno de carga (apartado
+Descripción de los cambios) el identificador del último CAI de preproducción, del que se
+deberán tomar los ficheros EAR Nota: los pases a producción se realizarán siempre utilizando los
+ficheros EAR instalados en preproducción.
+
 #Autores
 Lisbeth Lao 
 Jessica Centeno
