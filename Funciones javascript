@@ -1,0 +1,41 @@
+function GestionPacientes(){
+	document.getElementById("GestionPacientes").hidden = false;
+	document.getElementById("Menu").hidden = true;
+	document.getElementById("GestionSintomas").hidden = true;
+	document.getElementById("GestionEnfermedades").hidden = true;	
+}
+
+function GestionEnfermedades(){
+	document.getElementById("GestionEnfermedades").hidden = false;
+	document.getElementById("Menu").hidden = true;	
+	document.getElementById("GestionPacientes").hidden = true;
+	document.getElementById("GestionSintomas").hidden = true;
+}
+
+function GestionSintomas(){
+	document.getElementById("GestionSintomas").hidden = false;
+	document.getElementById("Menu").hidden = true;
+	document.getElementById("GestionPacientes").hidden = true;
+	document.getElementById("GestionEnfermedades").hidden = true;
+}
+
+function Paciente(){
+	document.getElementById("Pacientes").hidden = false;
+	document.getElementById("GestionPacientes").hidden = true;
+	document.getElementById("Sintomas").hidden = true;
+	document.getElementById("Enfermedades").hidden = true;
+}
+
+function Sintoma(){
+	document.getElementById("Sintomas").hidden = false;
+	document.getElementById("GestionSintomas").hidden = true;
+	document.getElementById("Pacientes").hidden = true;
+	document.getElementById("Enfermedades").hidden = true;
+}
+
+function Enfermedade(){
+	document.getElementById("Enfermedades").hidden = false;
+	document.getElementById("GestionEnfermedades").hidden = true;
+	document.getElementById("Sintomas").hidden = true;
+	document.getElementById("Pacientes").hidden = true;
+}
